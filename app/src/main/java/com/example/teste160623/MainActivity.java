@@ -1,43 +1,41 @@
 package com.example.teste160623;
 
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
-import java.text.BreakIterator;
 
 public class MainActivity extends AppCompatActivity {
-    Button buttonIrCadastro;
-    private BreakIterator etNome;
-    private BreakIterator etEmail;
-    private BreakIterator etCpf;
-    private Intent it;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonIrCadastro = findViewById(R.id.buttonIrCadastro);
-        buttonIrCadastro.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent in = new Intent(MainActivity.this, Cadastro.class);
-                    it.putExtra("nome", etNome.getText().toString());
-                    it.putExtra("email", etEmail.getText().toString());
-                    it.putExtra("cpf", etCpf.getText().toString());
+        Button buttonsomar=(Button)findViewById(R.id.buttonsomar);
+        Button buttonsubtrair=(Button)findViewById(R.id.buttonsubtrair);
+        Button buttonmultiplicar=(Button)findViewById(R.id.buttonmultiplicar);
+        Button buttondividir=(Button)findViewById(R.id.buttondividir);
 
-                    String nome = it.getStringExtra("nome");
-                    String email = it.getStringExtra("email");
-                    String cpf = it.getStringExtra("cpf");
+        Button btn=(Button)findViewById(R.id.buttonsomar);
+        TextView tv_resultado=(TextView)findViewById(R.id.tv_resultado);
+        EditText et_valor1=(EditText)findViewById(R.id.et_valor1);
+        EditText et_valor2=(EditText)findViewById(R.id.tv_resultado);
 
+        buttonsomar.setOnClickListener(new Viem.OnClicklistener(){
+        public void onClick(Viem v){
 
-
-                    startActivity(in);
+            buttonsubtrair.setOnClickListener(new Viem.OnClicklistener(){
+                public void onClick(Viem v) {
                 }
-            });
-        }
-    }
+                    buttonmultiplicar.setOnClickListener(new Viem.OnClicklistener(){
+                        public void onClick(Viem v){
+                    }
+                            buttondividir.setOnClickListener(new Viem.OnClicklistener() {
+                                public void onClick(Viem v) {
+                                }
+                            }
+                }

@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Teste 160623</string>
+    <string name="app_name">Calculadora Simples </string>
+    <string name="somar">SOMAR  </string>
+    <string name="subtrair"> SUBTRAIR </string>
+    <string name="multiplicar">MUlTIPLICAR </string>
+    <string name="dividir">DIVIDIR </string>
+    <string name="valor1">VALOR1 </string>
+    <string name="valor2">VALOR2 </string>
+    <string name="resultado">RESULTADO </string>
+
 </resources>
