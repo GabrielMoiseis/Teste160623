@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    double num1, num2, res;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,15 +28,45 @@ public class MainActivity extends AppCompatActivity {
 
         buttonsomar.setOnClickListener(new Viem.OnClicklistener(){
         public void onClick(Viem v){
+            num1=Double.parseDouble(et_valor1.getText().toString());
+            num2=Double.parseDouble(et_valor2.getText().toString());
+            res=num1+num2;
+            tv_resultado.setText(String.valueOf(res));
+
+        }
+        });
 
             buttonsubtrair.setOnClickListener(new Viem.OnClicklistener(){
                 public void onClick(Viem v) {
-                }
+                    num1=Double.parseDouble(et_valor1.getText().toString());
+                    num2=Double.parseDouble(et_valor2.getText().toString());
+                    res=num1-num2;
+                    tv_resultado.setText(String.valueOf(res));
+
+
+               }
+                });
                     buttonmultiplicar.setOnClickListener(new Viem.OnClicklistener(){
                         public void onClick(Viem v){
-                    }
+                            num1=Double.parseDouble(et_valor1.getText().toString());
+                            num2=Double.parseDouble(et_valor2.getText().toString());
+                            res=num1*num2;
+                            tv_resultado.setText(String.valueOf(res));
+
+
+
+                        }
+            });
+
                             buttondividir.setOnClickListener(new Viem.OnClicklistener() {
                                 public void onClick(Viem v) {
+                                    num1=Double.parseDouble(et_valor1.getText().toString());
+                                    num2=Double.parseDouble(et_valor2.getText().toString());
+                                    res=num1/num2;
+                                    tv_resultado.setText(String.valueOf(res));
+
+
                                 }
-                            }
+                            });
                 }
+            }
