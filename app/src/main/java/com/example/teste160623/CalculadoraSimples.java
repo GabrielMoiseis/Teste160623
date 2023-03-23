@@ -1,6 +1,7 @@
 package com.example.teste160623;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -8,7 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class MainActivity extends AppCompatActivity {
+public class CalculadoraSimples extends AppCompatActivity {
 
     double num1, num2, res;
     @Override
@@ -26,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         EditText et_valor1=(EditText)findViewById(R.id.et_valor1);
         EditText et_valor2=(EditText)findViewById(R.id.tv_resultado);
 
-        buttonsomar.setOnClickListener(new Viem.OnClicklistener(){
-        public void onClick(Viem v){
+        buttonsomar.setOnClickListener(new View.OnClickListener(){
+        public void onClick(View v){
             num1=Double.parseDouble(et_valor1.getText().toString());
             num2=Double.parseDouble(et_valor2.getText().toString());
             res=num1+num2;
@@ -36,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         }
         });
 
-            buttonsubtrair.setOnClickListener(new Viem.OnClicklistener(){
-                public void onClick(Viem v) {
+            buttonsubtrair.setOnClickListener(new View.OnClicklistener(){
+                public void onClick(View v) {
                     num1=Double.parseDouble(et_valor1.getText().toString());
                     num2=Double.parseDouble(et_valor2.getText().toString());
                     res=num1-num2;
@@ -46,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
                }
                 });
-                    buttonmultiplicar.setOnClickListener(new Viem.OnClicklistener(){
-                        public void onClick(Viem v){
+                    buttonmultiplicar.setOnClickListener(new View.OnClicklistener(){
+                        public void onClick(View v){
                             num1=Double.parseDouble(et_valor1.getText().toString());
                             num2=Double.parseDouble(et_valor2.getText().toString());
                             res=num1*num2;
@@ -58,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
                         }
             });
 
-                            buttondividir.setOnClickListener(new Viem.OnClicklistener() {
-                                public void onClick(Viem v) {
+                            buttondividir.setOnClickListener(new View.OnClicklistener() {
+                                public void onClick(View v) {
                                     num1=Double.parseDouble(et_valor1.getText().toString());
                                     num2=Double.parseDouble(et_valor2.getText().toString());
                                     res=num1/num2;
