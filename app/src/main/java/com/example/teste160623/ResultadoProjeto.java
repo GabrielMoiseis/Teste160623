@@ -14,26 +14,25 @@ public class ResultadoProjeto extends Projeto {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.desiresposta);
 
-        View btncalcular = findViewById(R.id.btncalcular);
+         btncalcular = findViewById(R.id.btncalcular);
 
-        View btncalcular = null;
         btncalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent in;
-                in = new Intent(Projeto.this, Resultado.class);
+                in = new Intent(ResultadoProjeto.this, Projeto.class);
 //in.putExtra…
                 startActivity(in);
 
             }
         });
-        Intent it = getIntert();
-        String nome=it.getStringExtra("nome")
+        Intent it = getIntent();
+        String nome=it.getStringExtra("nome");
         double valorppro = it.getDoubleExtra("btnvoltar", 0);
         TextView tv = findViewById(R.id.textView);
-        tv.setText(nome+" "+valor);
+        tv.setText(nome+" "+valorppro);
     }
 
 

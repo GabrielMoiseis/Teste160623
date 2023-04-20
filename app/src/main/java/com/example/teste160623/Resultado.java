@@ -7,7 +7,7 @@ import android.widget.Button;
 
 public class Resultado extends CalculadoraSimples {
      Button buttonirresultado;
-
+     Button btnvoltar1;
 
 
         @Override
@@ -22,11 +22,25 @@ public class Resultado extends CalculadoraSimples {
                 @Override
                 public void onClick(View view) {
                     Intent in;
-                    in = new Intent(CalculadoraSimples.this, Resultado.class);
+                    in = new Intent(Resultado.this, CalculadoraSimples.class);
 //in.putExtra…
                     startActivity(in);
                 }
             });
+
+            btnvoltar1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent in;
+                    in = new Intent(Resultado.this, CalculadoraSimples.class);
+//in.putExtra…
+                    startActivity(in);
+                }
+            });
+
+
+
+
         }
 
 

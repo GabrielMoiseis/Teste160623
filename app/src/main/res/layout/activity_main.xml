@@ -2,9 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/t"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CalculadoraSimples">
 
     <EditText
         android:id="@+id/et_valor1"
@@ -15,7 +16,8 @@
         android:layout_marginEnd="12dp"
         android:ems="10"
         android:hint="Valor1"
-        android:inputType="textPersonName"
+        android:inputType="number"
+        android:numeric="decimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -86,8 +88,9 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="15dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Valor2"
+        android:hint="Valor2"
+        android:inputType="number"
+        android:numeric="decimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,5 +109,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttondividir" />
+
+    <TextView
+        android:id="@+id/tv_resultadoCSimples"
+        android:layout_width="153dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="126dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_valor2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
