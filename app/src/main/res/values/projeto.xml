@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Calculadora de Porcentagem</string>
+    <string name="calcular">Calcule </string>
+    <string name="porcentagem">Digite o valor da porcentagem </string>
+    <string name="valor">Digite o número para saber a resposta </string>
+
+</resources>
