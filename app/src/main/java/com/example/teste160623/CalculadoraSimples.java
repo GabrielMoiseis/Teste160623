@@ -1,5 +1,6 @@
 package com.example.teste160623;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,9 +17,7 @@ public class CalculadoraSimples extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
+        setContentView(R.layout.telasimples);
 
         Button buttonsomar = (Button) findViewById(R.id.buttonsomar);
         Button buttonsubtrair = (Button) findViewById(R.id.buttonsubtrair);
@@ -35,10 +34,11 @@ public class CalculadoraSimples extends AppCompatActivity {
                 num1 = Double.parseDouble(et_valor1.getText().toString());
                 num2 = Double.parseDouble(et_valor2.getText().toString());
                 res = num1 + num2;
+                tv_resultado.setText(String.valueOf(res));
+                Intent it = new
+                        Intent(CalculadoraSimples.this, Resultado.class);
+                startActivity(it);
 
-               // tv_resultado.setText(String.valueOf(res));
-                tv_resultado.setText(String.valueOf(333));
-                tv_resultado.setText(String.valueOf(num2));
             }
         });
 
@@ -48,8 +48,9 @@ public class CalculadoraSimples extends AppCompatActivity {
                 num2 = Double.parseDouble(et_valor2.getText().toString());
                 res = num1 - num2;
                 tv_resultado.setText(String.valueOf(res));
-
-
+                Intent it = new
+                        Intent(CalculadoraSimples.this, Resultado.class);
+                startActivity(it);
             }
         });
 
@@ -60,7 +61,9 @@ public class CalculadoraSimples extends AppCompatActivity {
                 num2 = Double.parseDouble(et_valor2.getText().toString());
                 res = num1 * num2;
                 tv_resultado.setText(String.valueOf(res));
-
+                Intent it = new
+                        Intent(CalculadoraSimples.this, Resultado.class);
+                startActivity(it);
             }
         });
 
@@ -70,9 +73,15 @@ public class CalculadoraSimples extends AppCompatActivity {
                 num2 = Double.parseDouble(et_valor2.getText().toString());
                 res = num1 / num2;
                 tv_resultado.setText(String.valueOf(res));
-
-
+                Intent it = new
+                        Intent(CalculadoraSimples.this, Resultado.class);
+                        startActivity(it);
             }
         });
+
+
+        }
+
     }
-}
+
+

@@ -15,7 +15,7 @@ public class Projeto extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.telasimples);
 
         Button btncalcular=(Button)findViewById(R.id.btncalcular);
 

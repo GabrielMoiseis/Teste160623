@@ -1,48 +1,46 @@
 package com.example.teste160623;
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
-public class Resultado extends CalculadoraSimples {
-     Button buttonirresultado;
-     Button btnvoltar1;
 
+
+public class Resultado extends AppCompatActivity {
+    Button btnvoltar1;
+
+    TextView tv_resultado;
+
+
+        Intent it = getIntent();
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.telaresultado);
 
-            View buttonIrResultado = findViewById(R.id.buttonirresultado);
 
-            View buttonirresultado = null;
-            buttonirresultado.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent in;
-                    in = new Intent(Resultado.this, CalculadoraSimples.class);
-//in.putExtra…
-                    startActivity(in);
-                }
-            });
+
+            Intent it = getIntent();
+            String num1 = it.getStringExtra("num1");
+            String num2 = it.getStringExtra("num2");
+            String resultado = it.getStringExtra("result");
+
+
+
+            tv_resultado.setText(resultado);
 
             btnvoltar1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent in;
-                    in = new Intent(Resultado.this, CalculadoraSimples.class);
-//in.putExtra…
-                    startActivity(in);
+                    Intent it = new
+                            Intent(Resultado.this, CalculadoraSimples.class);
                 }
             });
 
 
-
-
         }
-
-
-
-}
+    }
