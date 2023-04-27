@@ -9,16 +9,16 @@ import android.widget.Button;
 
 public class Acerto extends AppCompatActivity {
 
-    Button button2;
+    Button btnvoltarm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_acerto);
+        setContentView(R.layout.telaacerto);
 
-        button2 = findViewById(R.id.button2);
+        btnvoltarm = findViewById(R.id.btnvoltarm);
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        btnvoltarm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(Acerto.this, Jogomemoria.class);

@@ -12,8 +12,8 @@ import android.widget.EditText;
 public class Jogomemoria extends AppCompatActivity {
 
 
-    Button btnConf;
-    EditText etTesteabc;
+    Button btnconf;
+    EditText et_testeabc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,39 +22,31 @@ public class Jogomemoria extends AppCompatActivity {
 
 
 
-        btnConf = findViewById(R.id.btnConf);
-        etTesteabc = findViewById(R.id.etTesteabc);
+        btnconf = findViewById(R.id.btnconf);
+        et_testeabc = findViewById(R.id.et_testeabc);
 
         Intent it = getIntent();
         String abc = it.getStringExtra("abcdefgghitopq");
 
 
-        btnConf.setOnClickListener(new View.OnClickListener() {
+        btnconf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String cba = etTesteabc.getText().toString();
+                String cba = et_testeabc.getText().toString();
 
 
-                if (abc.equalsIgnoreCase(cba)){
+                if (abc.equalsIgnoreCase(cba)) {
 
                     Intent it = new Intent(Jogomemoria.this, Acerto.class);
                     startActivity(it);
 
-                }else {
-                    Intent it = new Intent(Jogomemoria.this, TelaB2.class);
-                    startActivity(it);
-                }
 
+                    }
+                });
 
-                //startActivity(it);
             }
-        });
+        }
 
-    }
 }
-
-
-
-
 
