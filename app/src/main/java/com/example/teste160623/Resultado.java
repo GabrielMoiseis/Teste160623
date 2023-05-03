@@ -17,7 +17,10 @@ public class Resultado extends AppCompatActivity {
 
         Intent it = getIntent();
 
-        @Override
+    public static void setText(String valueOf) {
+    }
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.telaresultado);
