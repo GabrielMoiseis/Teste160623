@@ -31,4 +31,7 @@ public class Projeto extends AppCompatActivity {
             }
         });
     }
+
+    public byte[] getIdUsuario() {
+    }
 }
