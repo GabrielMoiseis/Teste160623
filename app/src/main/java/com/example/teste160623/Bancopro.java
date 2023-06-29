@@ -45,4 +45,7 @@ public class Bancopro extends SQLiteDatabase {
 
 
     }
+
+    private SQLiteDatabase getWritableDatabase() {
+    }
 }
