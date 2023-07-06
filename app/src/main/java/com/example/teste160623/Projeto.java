@@ -13,6 +13,10 @@ public class Projeto extends AppCompatActivity {
 
     Double num1, num2, res;
 
+    public Projeto(String usuarioId) {
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,5 +37,7 @@ public class Projeto extends AppCompatActivity {
     }
 
     public byte[] getIdUsuario() {
+
+
     }
 }

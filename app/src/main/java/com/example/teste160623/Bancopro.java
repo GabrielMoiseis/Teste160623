@@ -16,7 +16,8 @@ public class Bancopro extends SQLiteDatabase {
     protected static final String USUARIO_ID = "ID";
 
     public Bancopro(@Nullable Context context) {
-        super(context, "ClienteBD", null, 1);
+
+        super(context, "UsuarioBD", null, 1);
     }
 
     //É chamado na primeira vez que o banco de Dados(BD) é acessado.
@@ -31,7 +32,7 @@ public class Bancopro extends SQLiteDatabase {
 
     //Atualiza a versão do BD.
     //Permite que usuários antigos e novos usem a aplicação mesmo com o BD sofrendo manutenção
-    @Override
+    //@Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
@@ -62,7 +63,6 @@ public class Bancopro extends SQLiteDatabase {
 
         ContentValues contentValues = new ContentValues();//ContentValues é uma classe que permite armazenar dados agrupados aos pares. Exemplo contentValues.put("nome", value); contentValues.getString("name"). É uma associative array em PHP ou hashmap em outras linguagens.
         contentValues.put(USUARIO_ID, projeto.getIdUsuario());
-        //Por quê não tem o ID aqui? Porque o ID é tem incremento automático (AUTOINCREMENT). Veja a linha "CREATE TABLE..." dentro do método onCreate.
 
         long atualizarSucedido = db.update(TABELA_HISTORICO,
                 contentValues,
@@ -78,6 +78,8 @@ public class Bancopro extends SQLiteDatabase {
 
     private SQLiteDatabase getWritableDatabase() {
     }
+
+
 
     /**
      * Método para retornar a lista de usuarios completa.
@@ -103,7 +105,8 @@ public class Bancopro extends SQLiteDatabase {
                 do {
                     int usuarioCod = cursor.getInt(0);//A primeira coluna da tabela usuário é código
                   
-                    Projeto usuario = new Projeto(USUARIO_ID);//Sempre confira a ordem do construtor
+                    Usuario usuario = new usuario(USUARIO_ID);//Sempre confira a ordem do construtor
+
                     listaUsuarios.add(usuario);//Adiciona o objeto usuário a lista.
                 } while (cursor.moveToNext());//Enquanto houver um próximo registro (moveToNext)
             } else {
